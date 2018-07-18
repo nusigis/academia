@@ -4,9 +4,10 @@
         const state = initialState;
         const listeners = [];
         return {
-            getAlumnos: () => ({...alumnos}),
+            getAlumnos: () => ([...state.alumnos]),
             agregaAlumno: (alumno) => {
                 state.alumnos.push(alumno);
+                console.log(state);
                 propagate();
             },
             agregarAlumnos: (alumnos) => {
